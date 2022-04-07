@@ -11,6 +11,14 @@
     <content type="html"><![CDATA[<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight javascript"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><pre><code class="hljs JavaScript">npm install -g npm-check-updates<br></code></pre></td></tr></table></figure><h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs PowerShell">ncu <span class="hljs-literal">--help</span> //查看相关命令<br><br>ncu //检查当前项目中是否有需要更新的包<br><br>ncu <span class="hljs-literal">-u</span> //更新当前项目中引用的package至最新版 package.json<br></code></pre></td></tr></table></figure>]]></content>
     
     
+    <categories>
+      
+      <category>JavaScript</category>
+      
+      <category>npm</category>
+      
+    </categories>
+    
     
     <tags>
       
