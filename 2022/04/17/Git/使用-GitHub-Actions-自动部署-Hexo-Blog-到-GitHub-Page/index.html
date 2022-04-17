@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://dunhuixiao.github.io/img/index_img/%E4%BD%BF%E7%94%A8-GitHub-Actions-%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2-Hexo-Blog-%E5%88%B0-GitHub-Page.png">
 <meta property="article:published_time" content="2022-04-16T18:48:25.000Z">
-<meta property="article:modified_time" content="2022-04-17T15:43:37.936Z">
+<meta property="article:modified_time" content="2022-04-17T15:44:27.660Z">
 <meta property="article:author" content="Cookie🥭">
 <meta property="article:tag" content="GitHub Actions">
 <meta property="article:tag" content="CI">
@@ -269,7 +269,7 @@
 <h3 id="生成公钥私钥"><a href="#生成公钥私钥" class="headerlink" title="生成公钥私钥"></a>生成公钥私钥</h3><p>这里在之前配置 SSH 时已经处理完毕，操作步骤也比较简单，在任意文件夹打开 <code>Git Bash</code> 后输入以下指令：</p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></div></td><td class="code"><pre><code class="hljs PowerShell"><span class="hljs-comment"># 定位到对应文件夹</span><br><span class="hljs-built_in">cd</span> ~/.ssh <br><br><span class="hljs-comment"># 生成公钥私钥，一路回车即可</span><br>ssh<span class="hljs-literal">-keygen</span> <span class="hljs-literal">-t</span> rsa <span class="hljs-literal">-C</span> <span class="hljs-string">&quot;邮箱账户&quot;</span><br><br><span class="hljs-comment"># 查看公钥</span><br><span class="hljs-built_in">cat</span> id_rsa.pub<br><br><span class="hljs-comment"># 查看私钥</span><br><span class="hljs-built_in">cat</span> id_rsa<br></code></pre></td></tr></table></figure>
 
-<p>根据以上指令获取到公钥和私钥，私钥配置在 <code>GitHub -&gt; Setting -&gt; SSH and GPG keys -&gt; New SSH Key</code>，配置完成后即可在本机使用 SSH clone git 项目，大部分情况下国内使用 HTTPS 链接 clone 会出现超时情况，改为使用 SSH 会解决这个问题。</p>
+<p>根据以上指令获取到公钥和私钥，私钥配置在 <code>GitHub -&gt; Setting -&gt; SSH and GPG keys -&gt; New SSH Key</code>，配置完成后即可在本机使用 SSH clone Git 项目。<br>大部分情况下国内使用 HTTPS 链接 clone 会出现超时情况，改为使用 SSH 会解决这个问题。</p>
 <h3 id="配置部署密钥"><a href="#配置部署密钥" class="headerlink" title="配置部署密钥"></a>配置部署密钥</h3><p>复制公钥部分信息，如下图所示，配置在 Blog 仓库 <code>Setting -&gt; Secrets -&gt; Actions -&gt; New repository secret</code>，创建名称为 <code>HEXO_DEPLOY_PRIVATE_KEY</code>。</p>
 <p><img src="/../../img/Git/20220417231604.png" srcset="/img/loading.gif" lazyload><br><img src="/../../img/Git/20220417231820.png" srcset="/img/loading.gif" lazyload></p>
 <h2 id="编辑-GitHub-Actions"><a href="#编辑-GitHub-Actions" class="headerlink" title="编辑 GitHub Actions"></a>编辑 GitHub Actions</h2><p>在 Blog 仓库 Actions 中点击 New workflow，选择 Simple workflow 后粘贴以下内容并创建。</p>
