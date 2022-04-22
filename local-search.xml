@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>MyBatis Plus 启动扫描报错 The alias &#39;&#39; is already mapped to the value</title>
+    <link href="/2022/04/22/Java/MyBatis-Plus-%E5%90%AF%E5%8A%A8%E6%89%AB%E6%8F%8F%E6%8A%A5%E9%94%99-The-alias-is-already-mapped-to-the-value/"/>
+    <url>/2022/04/22/Java/MyBatis-Plus-%E5%90%AF%E5%8A%A8%E6%89%AB%E6%8F%8F%E6%8A%A5%E9%94%99-The-alias-is-already-mapped-to-the-value/</url>
+    
+    <content type="html"><![CDATA[<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>SpringBoot 项目启动时报错</p><figure class="highlight plaintext"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><pre><code class="hljs base">Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method &#x27;sqlSessionFactory&#x27; threw exception; nested exception is org.apache.ibatis.type.TypeException: The alias &#x27;&#x27; is already mapped to the value &#x27;com.java.balala.service$1&#x27;.<br></code></pre></td></tr></table></figure><h2 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h2><p>查看 <code>application.yml</code> 中 <code>mybatis-plus.typeAliasesPackage</code>，发现扫描路径配置的地址为 <code>com.java.balala.*</code>，启动时会扫描整个项目找寻绑定的 <code>entity</code>。<br>一般而言问题是扫描到的实体类名称相同，例如配置了扫描路径后，在路径下的不同的文件夹均有 <code>userEntity</code> 这个实体，默认会按照类名创建。<br>查找资料，<code>MyBatis-Plus</code> 会扫描配置路径下编译好的 <code>class</code> 文件全部加载为 <code>class</code> 对象进行处理，此时会把内部匿名类也算进去，而获取内部匿名类的别名为 ‘’。<br>排查源码源码定位到 <code>registerAlias</code> 方法，直接通过 <code>type.getSimpleName()</code> 获取了类的名称，如果是内部匿名类的别名会为 ‘’。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs Java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">registerAlias</span><span class="hljs-params">(Class&lt;?&gt; type)</span> &#123;<br>    <span class="hljs-type">String</span> <span class="hljs-variable">alias</span> <span class="hljs-operator">=</span> type.getSimpleName();<br>    <span class="hljs-type">Alias</span> <span class="hljs-variable">aliasAnnotation</span> <span class="hljs-operator">=</span> type.getAnnotation(Alias.class);<br>    <span class="hljs-keyword">if</span> (aliasAnnotation != <span class="hljs-literal">null</span>) &#123;<br>        alias = aliasAnnotation.value();<br>    &#125;<br>    registerAlias(alias, type);<br>&#125;<br></code></pre></td></tr></table></figure><p>排查代码发现报错处，只写了一个 <code>switch</code>，推测是 <code>switch</code> 创建了匿名类并冲突。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs Java"><span class="hljs-keyword">switch</span> (type) &#123;<br>    <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:<br>        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">RuntimeException</span>(<span class="hljs-string">&quot;1&quot;</span>);<br>    <span class="hljs-keyword">case</span> <span class="hljs-number">2</span>:<br>        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">RuntimeException</span>(<span class="hljs-string">&quot;2&quot;</span>);<br>    <span class="hljs-keyword">case</span> <span class="hljs-number">3</span>:<br>        <span class="hljs-keyword">return</span> dosomethings(<span class="hljs-number">3</span>);<br>    <span class="hljs-keyword">case</span> <span class="hljs-number">4</span>:<br>        <span class="hljs-keyword">return</span> dosomethings(<span class="hljs-number">4</span>);<br>    <span class="hljs-keyword">default</span>:<br>        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">RuntimeException</span>(<span class="hljs-string">&quot;default&quot;</span>);<br>&#125;<br></code></pre></td></tr></table></figure><h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>修改 <code>application.yml</code> 中 <code>mybatis-plus.typeAliasesPackage</code>，精确路径到实体类中，保证实体类名不冲突即可。<br>指定路径可以有多个，以逗号分隔即可。</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-attr">mybatis-plus:</span><br>  <span class="hljs-attr">mapper-locations:</span> <span class="hljs-string">classpath*:/mapper/**/*.xml</span><br>  <span class="hljs-comment">#实体扫描，多个package用逗号或者分号分隔</span><br>  <span class="hljs-attr">typeAliasesPackage:</span> <span class="hljs-string">com.java.balala.entity,com.java.lalala.entity</span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Java</category>
+      
+      <category>MyBatis Plus</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Java</tag>
+      
+      <tag>MyBatis Plus</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>使用 GitHub Actions 自动部署 Hexo Blog 到 GitHub Page</title>
     <link href="/2022/04/17/Git/%E4%BD%BF%E7%94%A8-GitHub-Actions-%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2-Hexo-Blog-%E5%88%B0-GitHub-Page/"/>
     <url>/2022/04/17/Git/%E4%BD%BF%E7%94%A8-GitHub-Actions-%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2-Hexo-Blog-%E5%88%B0-GitHub-Page/</url>
