@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>.gitignore 忽略文件修改后清除缓存并提交</title>
+    <link href="/2022/05/16/Git/gitignore-%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6%E4%BF%AE%E6%94%B9%E5%90%8E%E6%B8%85%E9%99%A4%E7%BC%93%E5%AD%98%E5%B9%B6%E6%8F%90%E4%BA%A4/"/>
+    <url>/2022/05/16/Git/gitignore-%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6%E4%BF%AE%E6%94%B9%E5%90%8E%E6%B8%85%E9%99%A4%E7%BC%93%E5%AD%98%E5%B9%B6%E6%8F%90%E4%BA%A4/</url>
+    
+    <content type="html"><![CDATA[<figure class="highlight powershell"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></div></td><td class="code"><pre><code class="hljs PowerShell"><span class="hljs-comment">#清除本地git所有缓存</span><br>git <span class="hljs-built_in">rm</span> <span class="hljs-literal">-r</span> <span class="hljs-literal">--cached</span> .<br><span class="hljs-comment">#添加本地所有文件</span><br>git add .<br><span class="hljs-comment">#提交</span><br>git commit <span class="hljs-literal">-m</span> <span class="hljs-string">&quot; .gitignore&quot;</span><br><span class="hljs-comment">#push到远程分支</span><br>git push origin master<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Git</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Git</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>MyBatis Plus 启动扫描报错 The alias &#39;&#39; is already mapped to the value</title>
     <link href="/2022/04/22/Java/MyBatis-Plus-%E5%90%AF%E5%8A%A8%E6%89%AB%E6%8F%8F%E6%8A%A5%E9%94%99-The-alias-is-already-mapped-to-the-value/"/>
     <url>/2022/04/22/Java/MyBatis-Plus-%E5%90%AF%E5%8A%A8%E6%89%AB%E6%8F%8F%E6%8A%A5%E9%94%99-The-alias-is-already-mapped-to-the-value/</url>
