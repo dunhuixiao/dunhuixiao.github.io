@@ -192,5 +192,32 @@
   
   
   
+  <entry>
+    <title>端口进程相关 cmd 指令</title>
+    <link href="/2021/06/09/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/%E7%AB%AF%E5%8F%A3%E8%BF%9B%E7%A8%8B%E7%9B%B8%E5%85%B3-cmd-%E6%8C%87%E4%BB%A4/"/>
+    <url>/2021/06/09/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/%E7%AB%AF%E5%8F%A3%E8%BF%9B%E7%A8%8B%E7%9B%B8%E5%85%B3-cmd-%E6%8C%87%E4%BB%A4/</url>
+    
+    <content type="html"><![CDATA[<div class="code-wrapper"><pre><code class="PowerShell">netstat -ano #查询所有端口netstat -ano | findstr &#123;port&#125; #查询指定端口号上的进程tasklist #查询所有进程tasklist | findstr &#123;pid&#125; #根据进程号查询对应的进程名称taskkill /f /t /im &#123;pname&#125; #kill指定名称的进程</code></pre></div>]]></content>
+    
+    
+    <categories>
+      
+      <category>工具教程</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>cmd</tag>
+      
+      <tag>Windows</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
   
 </search>
