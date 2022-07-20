@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>解决 Row 9959 was cut by GROUP_CONCAT() 报错的问题</title>
+    <link href="/2022/07/21/Java/%E8%A7%A3%E5%86%B3-Row-9959-was-cut-by-GROUP-CONCAT-%E6%8A%A5%E9%94%99%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <url>/2022/07/21/Java/%E8%A7%A3%E5%86%B3-Row-9959-was-cut-by-GROUP-CONCAT-%E6%8A%A5%E9%94%99%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+    
+    <content type="html"><![CDATA[<p><code>GROUP_CONCAT()</code> 函数受 <code>SELECT @@group_concat_max_len;</code> 里设置的的最大长度限制，MySQL 默认长度为 1024 个字符。</p><p>可以通过以下设置处理</p><figure class="highlight sql"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></div></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 查询当前设置</span><br><span class="hljs-keyword">SELECT</span> @<span class="hljs-variable">@group</span>_concat_max_len;<br><span class="hljs-keyword">SHOW</span> VARIABLES <span class="hljs-keyword">LIKE</span> <span class="hljs-string">&#x27;group_concat_max_len&#x27;</span>;<br><br><span class="hljs-comment">-- 设置大小</span><br><span class="hljs-keyword">SET</span> <span class="hljs-keyword">GLOBAL</span> group_concat_max_len<span class="hljs-operator">=</span><span class="hljs-number">10240000</span>; <span class="hljs-comment">-- 设置全局限制</span><br><span class="hljs-keyword">SET</span> SESSION group_concat_max_len<span class="hljs-operator">=</span><span class="hljs-number">10240000</span>; <span class="hljs-comment">-- 设置事务设置</span><br><span class="hljs-comment">-- 或者</span><br><span class="hljs-keyword">SET</span> <span class="hljs-keyword">GLOBAL</span> group_concat_max_len<span class="hljs-operator">=</span><span class="hljs-number">-1</span>;  <span class="hljs-comment">-- 最大值</span><br><span class="hljs-keyword">SET</span> SESSION group_concat_max_len<span class="hljs-operator">=</span><span class="hljs-number">-1</span> ;<span class="hljs-comment">-- 最大值</span><br></code></pre></td></tr></table></figure><p>设置完成后需要重启，最大可以设置数字为 2^32-1 4294967295</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Java</category>
+      
+      <category>MySQL</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Java</tag>
+      
+      <tag>MySQL</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>.gitignore 忽略文件修改后清除缓存并提交</title>
     <link href="/2022/05/16/Git/gitignore-%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6%E4%BF%AE%E6%94%B9%E5%90%8E%E6%B8%85%E9%99%A4%E7%BC%93%E5%AD%98%E5%B9%B6%E6%8F%90%E4%BA%A4/"/>
     <url>/2022/05/16/Git/gitignore-%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6%E4%BF%AE%E6%94%B9%E5%90%8E%E6%B8%85%E9%99%A4%E7%BC%93%E5%AD%98%E5%B9%B6%E6%8F%90%E4%BA%A4/</url>
@@ -212,6 +241,56 @@
       <tag>cmd</tag>
       
       <tag>Windows</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>MySQL 怎么排查慢 sql</title>
+    <link href="/2020/04/12/MySQL/MySQL-%E6%80%8E%E4%B9%88%E6%8E%92%E6%9F%A5%E6%85%A2-sql/"/>
+    <url>/2020/04/12/MySQL/MySQL-%E6%80%8E%E4%B9%88%E6%8E%92%E6%9F%A5%E6%85%A2-sql/</url>
+    
+    <content type="html"><![CDATA[<p>通过配置开启 <code>SET slow_query_log=1</code>，只对当前会话有效，如果需要开启全局，则需要使用 <code>SET GLOBAL slow_query_log = 1</code><br>设置 log 文件路径 <code>SET slow_query_log_file=&quot;file_path&quot;</code>，如果没有为慢查询日志文件指定文件名，默认文件名为 host_name-slow.log<br>设置阈值，单位秒 <code>SET long_query_time=3</code></p><p>与慢查询相关的设置说明：</p><figure class="highlight gherkin"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></div></td><td class="code"><pre><code class="hljs gherkin">+------------------------------------------+------------------------+--------------------------------------------------------------------------<br>|<span class="hljs-string"> Variable_name                            </span>|<span class="hljs-string"> Value                  </span>|<span class="hljs-string"> Content</span><br><span class="hljs-string">+------------------------------------------+------------------------+--------------------------------------------------------------------------</span><br><span class="hljs-string"></span>|<span class="hljs-string"> slow_query_log                           </span>|<span class="hljs-string"> ON                     </span>|<span class="hljs-string">打开慢查询，默认为关闭OFF</span><br><span class="hljs-string"></span>|<span class="hljs-string"> long_query_time                          </span>|<span class="hljs-string"> 1.000000               </span>|<span class="hljs-string">定义慢查询时间，执行时间超过1s的sql才会记录到slow log</span><br><span class="hljs-string"></span>|<span class="hljs-string"> log_output                               </span>|<span class="hljs-string"> FILE                   </span>|<span class="hljs-string">定义日志(general_log and slow_log)存放方式，FILE/TABLE/NONE</span><br><span class="hljs-string"></span>|<span class="hljs-string"> slow_query_log_file                      </span>|<span class="hljs-string"> D:\mysql\data\slow.log </span>|<span class="hljs-string">慢日志存放的文件</span><br><span class="hljs-string"></span>|<span class="hljs-string"> log_queries_not_using_indexes            </span>|<span class="hljs-string"> OFF                    </span>|<span class="hljs-string">5.6.5版本之后新增，记录任何不使用索引的sql</span><br><span class="hljs-string"></span>|<span class="hljs-string"> log_throttle_queries_not_using_indexes   </span>|<span class="hljs-string"> 0                      </span>|<span class="hljs-string">5.6.5版本之后新增，用来限制相同sql每分钟写slow log的频率，默认0，不限制</span><br><span class="hljs-string"></span>|<span class="hljs-string"> log_slow_admin_statements                </span>|<span class="hljs-string"> OFF                    </span>|<span class="hljs-string">5.6.11版本后新增，记录执行慢的管理操作，如ALTER/CREATE INDEX/ANALYZE TABLE</span><br><span class="hljs-string"></span>|<span class="hljs-string"> min_examined_row_limit                   </span>|<span class="hljs-string"> 0                      </span>|<span class="hljs-string">sql返回值小于设置的值则不记录到slow log，可设置为100</span><br><span class="hljs-string"></span>|<span class="hljs-string"> log_slow_slave_statements                </span>|<span class="hljs-string"> OFF                    </span>|<span class="hljs-string">在从服务器开启慢查询日志</span><br><span class="hljs-string">+------------------------------------------+------------------------+--------------------------------------------------------------------------</span><br></code></pre></td></tr></table></figure><p>MySQL 自带慢 sql 分析工具 mysqldumpslow，默认在 MySQL&#x2F;bin 目录下，可以通过控制台命令处理解析慢 sql 日志文件</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>MySQL</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>MySQL</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>int(m)、tinyint(m) 中，m 值的意义</title>
+    <link href="/2018/07/21/MySQL/int-m-%E3%80%81tinyint-m-%E4%B8%AD%EF%BC%8Cm-%E5%80%BC%E7%9A%84%E6%84%8F%E4%B9%89/"/>
+    <url>/2018/07/21/MySQL/int-m-%E3%80%81tinyint-m-%E4%B8%AD%EF%BC%8Cm-%E5%80%BC%E7%9A%84%E6%84%8F%E4%B9%89/</url>
+    
+    <content type="html"><![CDATA[<p><img src="/../../img/MySQL/e8a4a6f5e443fa86166825e8d44f3098.png"></p><ol><li>整数型的数值类型已经限制了取值范围，有符号整型和无符号整型都有，而 M 值并不代表可以存储的数值字符长度，它代表的是数据在显示时显示的最小长度；</li><li>当存储的字符长度超过 M 值时，没有任何的影响，只要不超过数值类型限制的范围；</li><li>当存储的字符长度小于 M 值时，只有在设置了 zerofill 用 0 来填充，才能够看到效果，换句话就是说，没有 zerofill，M 值就是无用的。</li></ol><p>总结：int(11)，tinyint(1)，bigint(20)，后面的数字，不代表占用空间容量。而代表最小显示位数。这个东西基本没有意义，除非你对字段指定 zerofill。<br>所以我们在设计 mysql 数据库时，建表时，mysql 会自动分配长度：int(11)、tinyint(4)、smallint(6)、mediumint(9)、bigint(20)。</p><div class="code-wrapper"><pre><code class="hljs">参考：https://www.cnblogs.com/totian/p/7065123.html</code></pre></div>]]></content>
+    
+    
+    <categories>
+      
+      <category>MySQL</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>MySQL</tag>
       
     </tags>
     
