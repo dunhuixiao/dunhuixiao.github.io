@@ -7,8 +7,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="https://fastly.jsdelivr.net/gh/dunhuixiao/dunhuixiao.github.io@master/img/mango.png">
-  <link rel="icon" href="https://fastly.jsdelivr.net/gh/dunhuixiao/dunhuixiao.github.io@master/img/mango.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://gcore.jsdelivr.net/gh/dunhuixiao/dunhuixiao.github.io@master/img/mango.png">
+  <link rel="icon" href="https://gcore.jsdelivr.net/gh/dunhuixiao/dunhuixiao.github.io@master/img/mango.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -26,7 +26,7 @@
 <meta property="og:description" content="netstat -ano #查询所有端口  netstat -ano | findstr &amp;#123;port&amp;#125; #查询指定端口号上的进程  tasklist #查询所有进程  tasklist | findstr &amp;#123;pid&amp;#125; #根据进程号查询对应的进程名称  taskkill &#x2F;f &#x2F;t &#x2F;im &amp;#123;pname&amp;#125; #kill指定名称的进程">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-06-09T03:43:59.000Z">
-<meta property="article:modified_time" content="2022-08-02T09:48:32.317Z">
+<meta property="article:modified_time" content="2022-08-02T18:04:01.498Z">
 <meta property="article:author" content="Cookie🥭">
 <meta property="article:tag" content="cmd">
 <meta property="article:tag" content="Windows">
@@ -35,22 +35,22 @@
   
   <title>端口进程相关 cmd 指令 - Cookie&#39;s Site</title>
 
-  <link  rel="stylesheet" href="https://fastly.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+  <link  rel="stylesheet" href="https://gcore.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
 
-  <link  rel="stylesheet" href="https://fastly.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
-  <link  rel="stylesheet" href="https://fastly.jsdelivr.net/npm/hint.css@2/hint.min.css" />
+  <link  rel="stylesheet" href="https://gcore.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://gcore.jsdelivr.net/npm/hint.css@2/hint.min.css" />
 
   
     
     
       
-      <link  rel="stylesheet" href="https://fastly.jsdelivr.net/npm/highlight.js@10/styles/atom-one-light.min.css" />
+      <link  rel="stylesheet" href="https://gcore.jsdelivr.net/npm/highlight.js@10/styles/atom-one-light.min.css" />
     
   
 
   
-    <link  rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+    <link  rel="stylesheet" href="https://gcore.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
   
 
 
@@ -70,7 +70,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"dunhuixiao.github.io","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"https://fastly.jsdelivr.net/gh/dunhuixiao/dunhuixiao.github.io@master/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"dunhuixiao.github.io","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"https://gcore.jsdelivr.net/gh/dunhuixiao/dunhuixiao.github.io@master/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -174,7 +174,7 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('https://fastly.jsdelivr.net/gh/dunhuixiao/dunhuixiao.github.io@master/img/banner.jpg') no-repeat center center;
+         style="background: url('https://gcore.jsdelivr.net/gh/dunhuixiao/dunhuixiao.github.io@master/img/banner.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
@@ -382,8 +382,8 @@ taskkill /f /t /im &#123;pname&#125; #kill指定名称的进程
 
   <!-- SCRIPTS -->
   
-  <script  src="https://fastly.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://fastly.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+  <script  src="https://gcore.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://gcore.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
 
   <script>
     NProgress.configure({"showSpinner":false,"trickleSpeed":100})
@@ -394,8 +394,8 @@ taskkill /f /t /im &#123;pname&#125; #kill指定名称的进程
   </script>
 
 
-<script  src="https://fastly.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
-<script  src="https://fastly.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="https://gcore.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://gcore.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
 
@@ -417,16 +417,16 @@ taskkill /f /t /im &#123;pname&#125; #kill指定名称的进程
 
 
   
-    <script  src="https://fastly.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+    <script  src="https://gcore.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
   
   
-    <script  src="https://fastly.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+    <script  src="https://gcore.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
   
   
-    <script  src="https://fastly.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+    <script  src="https://gcore.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
   
   
-    <script defer src="https://fastly.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+    <script defer src="https://gcore.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
   
 
 
@@ -434,7 +434,7 @@ taskkill /f /t /im &#123;pname&#125; #kill指定名称的进程
 
 
 
-  <script  src="https://fastly.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script  src="https://gcore.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
   <script>
     (function (window, document) {
       var typing = Fluid.plugins.typing;

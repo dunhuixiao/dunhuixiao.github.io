@@ -7,8 +7,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="https://fastly.jsdelivr.net/gh/dunhuixiao/dunhuixiao.github.io@master/img/mango.png">
-  <link rel="icon" href="https://fastly.jsdelivr.net/gh/dunhuixiao/dunhuixiao.github.io@master/img/mango.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://gcore.jsdelivr.net/gh/dunhuixiao/dunhuixiao.github.io@master/img/mango.png">
+  <link rel="icon" href="https://gcore.jsdelivr.net/gh/dunhuixiao/dunhuixiao.github.io@master/img/mango.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -25,34 +25,34 @@
 <meta property="og:site_name" content="Cookie&#39;s Site">
 <meta property="og:description" content="原因因为 TortoiseGit 默认使用的密钥格式不同，Git 使用 OpenSSH 格式，扩展名为 .rsa，而 TortoiseGit 使用 PuTTY 格式，扩展名为 .ppk。SourceTree 也默认使用的是 PuTTY 格式，可以在工具 -&gt; 选项 -&gt; 一般 -&gt; SSH客户端配置中修改。 解决在安装 TortoiseGit 引导时选择 OpenSSH 格式 或">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://fastly.jsdelivr.net/gh/dunhuixiao/dunhuixiao.github.io@master/img/Git/1650114954023-98b9e194-fe13-43d3-9392-be7d790808ca.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/dunhuixiao/dunhuixiao.github.io@master/img/Git/1650114954023-98b9e194-fe13-43d3-9392-be7d790808ca.png">
 <meta property="article:published_time" content="2021-08-06T13:58:41.000Z">
-<meta property="article:modified_time" content="2022-08-02T09:48:32.317Z">
+<meta property="article:modified_time" content="2022-08-02T18:04:01.498Z">
 <meta property="article:author" content="Cookie🥭">
 <meta property="article:tag" content="Git">
 <meta property="article:tag" content="SSH">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://fastly.jsdelivr.net/gh/dunhuixiao/dunhuixiao.github.io@master/img/Git/1650114954023-98b9e194-fe13-43d3-9392-be7d790808ca.png">
+<meta name="twitter:image" content="https://gcore.jsdelivr.net/gh/dunhuixiao/dunhuixiao.github.io@master/img/Git/1650114954023-98b9e194-fe13-43d3-9392-be7d790808ca.png">
   
   
   <title>Git SSH Key 配置好后通过 TortoiseGit GUI 获取代码报错 - Cookie&#39;s Site</title>
 
-  <link  rel="stylesheet" href="https://fastly.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+  <link  rel="stylesheet" href="https://gcore.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
 
-  <link  rel="stylesheet" href="https://fastly.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
-  <link  rel="stylesheet" href="https://fastly.jsdelivr.net/npm/hint.css@2/hint.min.css" />
+  <link  rel="stylesheet" href="https://gcore.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://gcore.jsdelivr.net/npm/hint.css@2/hint.min.css" />
 
   
     
     
       
-      <link  rel="stylesheet" href="https://fastly.jsdelivr.net/npm/highlight.js@10/styles/atom-one-light.min.css" />
+      <link  rel="stylesheet" href="https://gcore.jsdelivr.net/npm/highlight.js@10/styles/atom-one-light.min.css" />
     
   
 
   
-    <link  rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+    <link  rel="stylesheet" href="https://gcore.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
   
 
 
@@ -72,7 +72,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"dunhuixiao.github.io","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"https://fastly.jsdelivr.net/gh/dunhuixiao/dunhuixiao.github.io@master/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"dunhuixiao.github.io","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"https://gcore.jsdelivr.net/gh/dunhuixiao/dunhuixiao.github.io@master/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -176,7 +176,7 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('https://fastly.jsdelivr.net/gh/dunhuixiao/dunhuixiao.github.io@master/img/banner.jpg') no-repeat center center;
+         style="background: url('https://gcore.jsdelivr.net/gh/dunhuixiao/dunhuixiao.github.io@master/img/banner.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
@@ -248,9 +248,9 @@
             <h1 style="display: none">Git SSH Key 配置好后通过 TortoiseGit GUI 获取代码报错</h1>
             
             <div class="markdown-body">
-              <h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>因为 TortoiseGit 默认使用的密钥格式不同，Git 使用 <code>OpenSSH</code> 格式，扩展名为 <code>.rsa</code>，而 TortoiseGit 使用 <code>PuTTY</code> 格式，扩展名为 <code>.ppk</code>。<br>SourceTree 也默认使用的是 <code>PuTTY</code> 格式，可以在<code>工具 -&gt; 选项 -&gt; 一般 -&gt; SSH客户端配置</code>中修改。<br><img src="/../../img/Git/1650114954023-98b9e194-fe13-43d3-9392-be7d790808ca.png" srcset="https://fastly.jsdelivr.net/gh/dunhuixiao/dunhuixiao.github.io@master/img/loading.gif" lazyload></p>
-<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>在安装 <code>TortoiseGit</code> 引导时选择 <code>OpenSSH</code> 格式<br><img src="/../../img/Git/1628257914482-d72067d6-6822-408c-b780-c19bc6b4b89d.png" srcset="https://fastly.jsdelivr.net/gh/dunhuixiao/dunhuixiao.github.io@master/img/loading.gif" lazyload></p>
-<p>或者是在安装完毕后修改 SSH 客户端到 git ssh.exe<br><img src="/../../img/Git/1628257957022-26f100e0-3a14-4265-9232-ed1b3ab9aced.png" srcset="https://fastly.jsdelivr.net/gh/dunhuixiao/dunhuixiao.github.io@master/img/loading.gif" lazyload></p>
+              <h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>因为 TortoiseGit 默认使用的密钥格式不同，Git 使用 <code>OpenSSH</code> 格式，扩展名为 <code>.rsa</code>，而 TortoiseGit 使用 <code>PuTTY</code> 格式，扩展名为 <code>.ppk</code>。<br>SourceTree 也默认使用的是 <code>PuTTY</code> 格式，可以在<code>工具 -&gt; 选项 -&gt; 一般 -&gt; SSH客户端配置</code>中修改。<br><img src="/../../img/Git/1650114954023-98b9e194-fe13-43d3-9392-be7d790808ca.png" srcset="https://gcore.jsdelivr.net/gh/dunhuixiao/dunhuixiao.github.io@master/img/loading.gif" lazyload></p>
+<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>在安装 <code>TortoiseGit</code> 引导时选择 <code>OpenSSH</code> 格式<br><img src="/../../img/Git/1628257914482-d72067d6-6822-408c-b780-c19bc6b4b89d.png" srcset="https://gcore.jsdelivr.net/gh/dunhuixiao/dunhuixiao.github.io@master/img/loading.gif" lazyload></p>
+<p>或者是在安装完毕后修改 SSH 客户端到 git ssh.exe<br><img src="/../../img/Git/1628257957022-26f100e0-3a14-4265-9232-ed1b3ab9aced.png" srcset="https://gcore.jsdelivr.net/gh/dunhuixiao/dunhuixiao.github.io@master/img/loading.gif" lazyload></p>
 
             </div>
             <hr>
@@ -377,8 +377,8 @@
 
   <!-- SCRIPTS -->
   
-  <script  src="https://fastly.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://fastly.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+  <script  src="https://gcore.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://gcore.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
 
   <script>
     NProgress.configure({"showSpinner":false,"trickleSpeed":100})
@@ -389,8 +389,8 @@
   </script>
 
 
-<script  src="https://fastly.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
-<script  src="https://fastly.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="https://gcore.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://gcore.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
 
@@ -412,16 +412,16 @@
 
 
   
-    <script  src="https://fastly.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+    <script  src="https://gcore.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
   
   
-    <script  src="https://fastly.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+    <script  src="https://gcore.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
   
   
-    <script  src="https://fastly.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+    <script  src="https://gcore.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
   
   
-    <script defer src="https://fastly.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+    <script defer src="https://gcore.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
   
 
 
@@ -429,7 +429,7 @@
 
 
 
-  <script  src="https://fastly.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script  src="https://gcore.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
   <script>
     (function (window, document) {
       var typing = Fluid.plugins.typing;

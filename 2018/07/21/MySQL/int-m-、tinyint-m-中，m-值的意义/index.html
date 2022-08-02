@@ -7,8 +7,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="https://fastly.jsdelivr.net/gh/dunhuixiao/dunhuixiao.github.io@master/img/mango.png">
-  <link rel="icon" href="https://fastly.jsdelivr.net/gh/dunhuixiao/dunhuixiao.github.io@master/img/mango.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://gcore.jsdelivr.net/gh/dunhuixiao/dunhuixiao.github.io@master/img/mango.png">
+  <link rel="icon" href="https://gcore.jsdelivr.net/gh/dunhuixiao/dunhuixiao.github.io@master/img/mango.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://dunhuixiao.github.io/img/MySQL/e8a4a6f5e443fa86166825e8d44f3098.png">
 <meta property="article:published_time" content="2018-07-20T18:50:02.000Z">
-<meta property="article:modified_time" content="2022-08-02T09:48:32.317Z">
+<meta property="article:modified_time" content="2022-08-02T18:04:01.498Z">
 <meta property="article:author" content="Cookie🥭">
 <meta property="article:tag" content="MySQL">
 <meta name="twitter:card" content="summary_large_image">
@@ -36,22 +36,22 @@
   
   <title>int(m)、tinyint(m) 中，m 值的意义 - Cookie&#39;s Site</title>
 
-  <link  rel="stylesheet" href="https://fastly.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+  <link  rel="stylesheet" href="https://gcore.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
 
-  <link  rel="stylesheet" href="https://fastly.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
-  <link  rel="stylesheet" href="https://fastly.jsdelivr.net/npm/hint.css@2/hint.min.css" />
+  <link  rel="stylesheet" href="https://gcore.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://gcore.jsdelivr.net/npm/hint.css@2/hint.min.css" />
 
   
     
     
       
-      <link  rel="stylesheet" href="https://fastly.jsdelivr.net/npm/highlight.js@10/styles/atom-one-light.min.css" />
+      <link  rel="stylesheet" href="https://gcore.jsdelivr.net/npm/highlight.js@10/styles/atom-one-light.min.css" />
     
   
 
   
-    <link  rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+    <link  rel="stylesheet" href="https://gcore.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
   
 
 
@@ -71,7 +71,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"dunhuixiao.github.io","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"https://fastly.jsdelivr.net/gh/dunhuixiao/dunhuixiao.github.io@master/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"dunhuixiao.github.io","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"https://gcore.jsdelivr.net/gh/dunhuixiao/dunhuixiao.github.io@master/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
@@ -175,7 +175,7 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('https://fastly.jsdelivr.net/gh/dunhuixiao/dunhuixiao.github.io@master/img/banner.jpg') no-repeat center center;
+         style="background: url('https://gcore.jsdelivr.net/gh/dunhuixiao/dunhuixiao.github.io@master/img/banner.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
@@ -247,7 +247,7 @@
             <h1 style="display: none">int(m)、tinyint(m) 中，m 值的意义</h1>
             
             <div class="markdown-body">
-              <p><img src="/../../img/MySQL/e8a4a6f5e443fa86166825e8d44f3098.png" srcset="https://fastly.jsdelivr.net/gh/dunhuixiao/dunhuixiao.github.io@master/img/loading.gif" lazyload></p>
+              <p><img src="/../../img/MySQL/e8a4a6f5e443fa86166825e8d44f3098.png" srcset="https://gcore.jsdelivr.net/gh/dunhuixiao/dunhuixiao.github.io@master/img/loading.gif" lazyload></p>
 <ol>
 <li>整数型的数值类型已经限制了取值范围，有符号整型和无符号整型都有，而 M 值并不代表可以存储的数值字符长度，它代表的是数据在显示时显示的最小长度；</li>
 <li>当存储的字符长度超过 M 值时，没有任何的影响，只要不超过数值类型限制的范围；</li>
@@ -374,8 +374,8 @@
 
   <!-- SCRIPTS -->
   
-  <script  src="https://fastly.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://fastly.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+  <script  src="https://gcore.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://gcore.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
 
   <script>
     NProgress.configure({"showSpinner":false,"trickleSpeed":100})
@@ -386,8 +386,8 @@
   </script>
 
 
-<script  src="https://fastly.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
-<script  src="https://fastly.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="https://gcore.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://gcore.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
 
@@ -409,16 +409,16 @@
 
 
   
-    <script  src="https://fastly.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+    <script  src="https://gcore.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
   
   
-    <script  src="https://fastly.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+    <script  src="https://gcore.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
   
   
-    <script  src="https://fastly.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+    <script  src="https://gcore.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
   
   
-    <script defer src="https://fastly.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+    <script defer src="https://gcore.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
   
 
 
@@ -426,7 +426,7 @@
 
 
 
-  <script  src="https://fastly.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script  src="https://gcore.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
   <script>
     (function (window, document) {
       var typing = Fluid.plugins.typing;
