@@ -299,6 +299,31 @@
   
   
   <entry>
+    <title>in、not in、exists、not exists 的区别</title>
+    <link href="/2019/08/28/MySQL/in%E3%80%81not-in%E3%80%81exists%E3%80%81not-exists-%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+    <url>/2019/08/28/MySQL/in%E3%80%81not-in%E3%80%81exists%E3%80%81not-exists-%E7%9A%84%E5%8C%BA%E5%88%AB/</url>
+    
+    <content type="html"><![CDATA[<h3 id="in-和-exists-的区别"><a href="#in-和-exists-的区别" class="headerlink" title="in 和 exists 的区别"></a>in 和 exists 的区别</h3><p>exists：exists() 后面的子查询返回的是一个 boolean 值，符合条件则输出，再根据主查询的每一行去子查询里面查询<br>执行顺序： 1.首先执行一次外部查询 2.对于外部查询中的每一行分别执行一次子查询，而且每次执行子查询时都会引用外部查询中当前行的值。 3.使用子查询的结果来确定外部查询的结果集。<br>如果外部查询返回 100 行，SQL 就将执行 101 次查询，一次执行外部查询，然后为外部查询返回的每一行执行一次子查询。</p><p>in：in() 后面的子查询是返回结果集的，执行次序和 exists()不一样。<br>子查询先产生结果集，然后主查询再去结果集里去找符合要求的字段列表去符合要求的输出，反之则不输出。</p><p>如果两个表中一个较小，一个较大，则子查询表大的用 exists，子查询表小的用 in。</p><h3 id="not-in-和-not-exists-的区别"><a href="#not-in-和-not-exists-的区别" class="headerlink" title="not in 和 not exists 的区别"></a>not in 和 not exists 的区别</h3><p>not in：内外表都进行全表扫描，没有用到索引。<br>执行顺序：<br>是在表中一条记录一条记录的查询（查询每条记录）符合要求的就返回结果集，不符合的就继续查询下一条记录，直到把表中的记录查询完。也就是说为了证明找不到，所以只能查询全部记录才能证明。<br>并没有用到索引。</p><p>not exists：子查询依然能用到表上的索引。<br>执行顺序：<br>在表中查询，是根据索引查询的，如果存在就返回 true，如果不存在就返回 false，不会每条记录都去查询。</p><p>无论哪个表大，用 not exists 都比 not in 要快。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>MySQL</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>MySQL</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>int(m)、tinyint(m) 中，m 值的意义</title>
     <link href="/2018/07/21/MySQL/int-m-%E3%80%81tinyint-m-%E4%B8%AD%EF%BC%8Cm-%E5%80%BC%E7%9A%84%E6%84%8F%E4%B9%89/"/>
     <url>/2018/07/21/MySQL/int-m-%E3%80%81tinyint-m-%E4%B8%AD%EF%BC%8Cm-%E5%80%BC%E7%9A%84%E6%84%8F%E4%B9%89/</url>

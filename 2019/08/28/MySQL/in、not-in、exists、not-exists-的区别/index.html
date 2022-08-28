@@ -18,22 +18,39 @@
   <meta name="author" content="Cookie🥭">
   <meta name="keywords" content="Java,C#,JavaScript">
   
-    <meta property="og:type" content="website">
-<meta property="og:title" content="归档">
-<meta property="og:url" content="https://dunhuixiao.github.io/archives/2021/07/index.html">
+    <meta name="description" content="in 和 exists 的区别exists：exists() 后面的子查询返回的是一个 boolean 值，符合条件则输出，再根据主查询的每一行去子查询里面查询执行顺序： 1.首先执行一次外部查询 2.对于外部查询中的每一行分别执行一次子查询，而且每次执行子查询时都会引用外部查询中当前行的值。 3.使用子查询的结果来确定外部查询的结果集。如果外部查询返回 100 行，SQL 就将执行 101 次查">
+<meta property="og:type" content="article">
+<meta property="og:title" content="in、not in、exists、not exists 的区别">
+<meta property="og:url" content="https://dunhuixiao.github.io/2019/08/28/MySQL/in%E3%80%81not-in%E3%80%81exists%E3%80%81not-exists-%E7%9A%84%E5%8C%BA%E5%88%AB/index.html">
 <meta property="og:site_name" content="Cookie&#39;s Site">
+<meta property="og:description" content="in 和 exists 的区别exists：exists() 后面的子查询返回的是一个 boolean 值，符合条件则输出，再根据主查询的每一行去子查询里面查询执行顺序： 1.首先执行一次外部查询 2.对于外部查询中的每一行分别执行一次子查询，而且每次执行子查询时都会引用外部查询中当前行的值。 3.使用子查询的结果来确定外部查询的结果集。如果外部查询返回 100 行，SQL 就将执行 101 次查">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-08-28T10:40:18.000Z">
+<meta property="article:modified_time" content="2022-08-28T11:01:52.915Z">
 <meta property="article:author" content="Cookie🥭">
-<meta property="article:tag" content="Java">
-<meta property="article:tag" content="C#">
-<meta property="article:tag" content="JavaScript">
+<meta property="article:tag" content="MySQL">
 <meta name="twitter:card" content="summary_large_image">
   
   
-  <title>归档 - Cookie&#39;s Site</title>
+  <title>in、not in、exists、not exists 的区别 - Cookie&#39;s Site</title>
 
   <link  rel="stylesheet" href="https://gcore.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
+
+  <link  rel="stylesheet" href="https://gcore.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://gcore.jsdelivr.net/npm/hint.css@2/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://gcore.jsdelivr.net/npm/highlight.js@10/styles/atom-one-light.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://gcore.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
 
 
 <!-- 主题依赖的图标库，不要自行修改 -->
@@ -60,7 +77,7 @@
 
 
 <body>
-  <header style="height: 60vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
@@ -161,9 +178,48 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="归档">
+            <span class="h2" id="subtitle" title="in、not in、exists、not exists 的区别">
               
             </span>
+
+            
+              <div class="mt-3">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      Cookie🥭
+    </span>
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2019-08-28 18:40" pubdate>
+        2019年8月28日
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      597 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      5 分钟
+    </span>
+  
+
+  
+  
+</div>
 
             
           </div>
@@ -176,40 +232,100 @@
 
   <main>
     
-      <div class="container nopadding-x-md">
-        <div class="py-5" id="board"
-          >
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-<div class="list-group">
-  <p class="h4">共计 13 篇文章</p>
-  <hr>
-  
-  
-    
       
-      <p class="h5">2021</p>
-    
-    <a href="/2021/07/30/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/WIN10-%E8%93%9D%E7%89%99%E6%97%A0%E6%B3%95%E5%88%A0%E9%99%A4%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">WIN10 蓝牙无法删除解决方案</span>
-      <time style="float: right;">07-30</time>
-    </a>
-  
-</div>
 
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">in、not in、exists、not exists 的区别</h1>
+            
+            <div class="markdown-body">
+              <h3 id="in-和-exists-的区别"><a href="#in-和-exists-的区别" class="headerlink" title="in 和 exists 的区别"></a>in 和 exists 的区别</h3><p>exists：exists() 后面的子查询返回的是一个 boolean 值，符合条件则输出，再根据主查询的每一行去子查询里面查询<br>执行顺序： 1.首先执行一次外部查询 2.对于外部查询中的每一行分别执行一次子查询，而且每次执行子查询时都会引用外部查询中当前行的值。 3.使用子查询的结果来确定外部查询的结果集。<br>如果外部查询返回 100 行，SQL 就将执行 101 次查询，一次执行外部查询，然后为外部查询返回的每一行执行一次子查询。</p>
+<p>in：in() 后面的子查询是返回结果集的，执行次序和 exists()不一样。<br>子查询先产生结果集，然后主查询再去结果集里去找符合要求的字段列表去符合要求的输出，反之则不输出。</p>
+<p>如果两个表中一个较小，一个较大，则子查询表大的用 exists，子查询表小的用 in。</p>
+<h3 id="not-in-和-not-exists-的区别"><a href="#not-in-和-not-exists-的区别" class="headerlink" title="not in 和 not exists 的区别"></a>not in 和 not exists 的区别</h3><p>not in：内外表都进行全表扫描，没有用到索引。<br>执行顺序：<br>是在表中一条记录一条记录的查询（查询每条记录）符合要求的就返回结果集，不符合的就继续查询下一条记录，直到把表中的记录查询完。也就是说为了证明找不到，所以只能查询全部记录才能证明。<br>并没有用到索引。</p>
+<p>not exists：子查询依然能用到表上的索引。<br>执行顺序：<br>在表中查询，是根据索引查询的，如果存在就返回 true，如果不存在就返回 false，不会每条记录都去查询。</p>
+<p>无论哪个表大，用 not exists 都比 not in 要快。</p>
 
-
-
-
-              </div>
             </div>
-          </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/MySQL/">MySQL</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/MySQL/">MySQL</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/04/12/MySQL/MySQL-%E6%80%8E%E4%B9%88%E6%8E%92%E6%9F%A5%E6%85%A2-sql/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">MySQL 怎么排查慢 sql</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2018/07/21/MySQL/int-m-%E3%80%81tinyint-m-%E4%B8%AD%EF%BC%8Cm-%E5%80%BC%E7%9A%84%E6%84%8F%E4%B9%89/">
+                        <span class="hidden-mobile">int(m)、tinyint(m) 中，m 值的意义</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
         </div>
       </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
     
 
     
@@ -292,6 +408,19 @@
   
 
 
+
+  
+    <script  src="https://gcore.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://gcore.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://gcore.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://gcore.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
 
 
 
