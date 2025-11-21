@@ -1,1 +1,0 @@
-fetch("https://v1.hitokoto.cn/?c=k").then(function(t){return t.json()}).then(function(t){var n=document.getElementById("quote");n.innerText=t.hitokoto}).catch(function(t){console.error(t)});
