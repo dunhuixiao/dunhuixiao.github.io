@@ -22,10 +22,10 @@ https://dunhuixiao.github.io/2018/07/20/MySQL/int-m-%E3%80%81tinyint-m-%E4%B8%AD
 https://dunhuixiao.github.io/
 https://dunhuixiao.github.io/tags/Git/
 https://dunhuixiao.github.io/tags/SSH/
-https://dunhuixiao.github.io/tags/Java/
-https://dunhuixiao.github.io/tags/List/
 https://dunhuixiao.github.io/tags/GitHub-Actions/
 https://dunhuixiao.github.io/tags/CI/
+https://dunhuixiao.github.io/tags/Java/
+https://dunhuixiao.github.io/tags/List/
 https://dunhuixiao.github.io/tags/MyBatis-Plus/
 https://dunhuixiao.github.io/tags/MySQL/
 https://dunhuixiao.github.io/tags/JavaScript/
