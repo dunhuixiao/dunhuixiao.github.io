@@ -1,1 +1,1 @@
-$(document).ready(function(){function t(){var t=$("#hiddenHeaderContentArray span");var n=Math.floor(Math.random()*t.length);return t.eq(n).text()}var n=$("#targetSpan");n.text(t())});
+$(document).ready(function(){var t,e;$("#targetSpan").text((t=$("#hiddenHeaderContentArray span"),e=Math.floor(Math.random()*t.length),t.eq(e).text()))});

@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Sora</title>
+  <icon>https://dunhuixiao.github.io/icon.png</icon>
+  <subtitle>池上听雷阶前看雨，花开千年人犹不老。</subtitle>
+  <link href="https://dunhuixiao.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://dunhuixiao.github.io/"/>
+  <updated>2023-11-08T02:21:37.000Z</updated>
+  <id>https://dunhuixiao.github.io/</id>
+  
+  <author>
+    <name>Sora</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>List.set() 报错 UnsupportedOperationException</title>
+    <link href="https://dunhuixiao.github.io/2023/11/08/Java/List-set-%E6%8A%A5%E9%94%99-UnsupportedOperationException/"/>
+    <id>https://dunhuixiao.github.io/2023/11/08/Java/List-set-%E6%8A%A5%E9%94%99-UnsupportedOperationException/</id>
+    <published>2023-11-08T02:21:37.000Z</published>
+    <updated>2023-11-08T02:21:37.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/hint.css/2.7.0/hint.min.css&quot;&gt;&lt;div</summary>
+        
+      
+    
+    
+    
+    <category term="Java" scheme="https://dunhuixiao.github.io/categories/Java/"/>
+    
+    
+    <category term="Java" scheme="https://dunhuixiao.github.io/tags/Java/"/>
+    
+    <category term="List" scheme="https://dunhuixiao.github.io/tags/List/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IDEA 更新后每个变量名都是不同颜色的设置项</title>
+    <link href="https://dunhuixiao.github.io/2022/11/30/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/IDEA-%E6%9B%B4%E6%96%B0%E5%90%8E%E6%AF%8F%E4%B8%AA%E5%8F%98%E9%87%8F%E5%90%8D%E9%83%BD%E6%98%AF%E4%B8%8D%E5%90%8C%E9%A2%9C%E8%89%B2%E7%9A%84%E8%AE%BE%E7%BD%AE%E9%A1%B9/"/>
+    <id>https://dunhuixiao.github.io/2022/11/30/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/IDEA-%E6%9B%B4%E6%96%B0%E5%90%8E%E6%AF%8F%E4%B8%AA%E5%8F%98%E9%87%8F%E5%90%8D%E9%83%BD%E6%98%AF%E4%B8%8D%E5%90%8C%E9%A2%9C%E8%89%B2%E7%9A%84%E8%AE%BE%E7%BD%AE%E9%A1%B9/</id>
+    <published>2022-11-30T11:59:06.000Z</published>
+    <updated>2022-11-30T11:59:06.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/hint.css/2.7.0/hint.min.css&quot;&gt;&lt;div</summary>
+        
+      
+    
+    
+    
+    <category term="工具教程" scheme="https://dunhuixiao.github.io/categories/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="Java" scheme="https://dunhuixiao.github.io/tags/Java/"/>
+    
+    <category term="IDEA" scheme="https://dunhuixiao.github.io/tags/IDEA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Sourcetree 推送报错 Updates were rejected because the tag already exists in the remote.</title>
+    <link href="https://dunhuixiao.github.io/2022/08/28/Git/Sourcetree-%E6%8E%A8%E9%80%81%E6%8A%A5%E9%94%99-Updates-were-rejected-because-the-tag-already-exists-in-the-remote/"/>
+    <id>https://dunhuixiao.github.io/2022/08/28/Git/Sourcetree-%E6%8E%A8%E9%80%81%E6%8A%A5%E9%94%99-Updates-were-rejected-because-the-tag-already-exists-in-the-remote/</id>
+    <published>2022-08-28T10:03:46.000Z</published>
+    <updated>2022-08-28T10:03:46.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/hint.css/2.7.0/hint.min.css&quot;&gt;&lt;div</summary>
+        
+      
+    
+    
+    
+    <category term="Git" scheme="https://dunhuixiao.github.io/categories/Git/"/>
+    
+    
+    <category term="Git" scheme="https://dunhuixiao.github.io/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>解决 Row 9959 was cut by GROUP_CONCAT() 报错的问题</title>
+    <link href="https://dunhuixiao.github.io/2022/07/20/Java/%E8%A7%A3%E5%86%B3-Row-9959-was-cut-by-GROUP-CONCAT-%E6%8A%A5%E9%94%99%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>https://dunhuixiao.github.io/2022/07/20/Java/%E8%A7%A3%E5%86%B3-Row-9959-was-cut-by-GROUP-CONCAT-%E6%8A%A5%E9%94%99%E7%9A%84%E9%97%AE%E9%A2%98/</id>
+    <published>2022-07-20T16:09:08.000Z</published>
+    <updated>2022-07-20T16:09:08.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/hint.css/2.7.0/hint.min.css&quot;&gt;&lt;div</summary>
+        
+      
+    
+    
+    
+    <category term="Java" scheme="https://dunhuixiao.github.io/categories/Java/"/>
+    
+    <category term="MySQL" scheme="https://dunhuixiao.github.io/categories/Java/MySQL/"/>
+    
+    
+    <category term="Java" scheme="https://dunhuixiao.github.io/tags/Java/"/>
+    
+    <category term="MySQL" scheme="https://dunhuixiao.github.io/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>.gitignore 忽略文件修改后清除缓存并提交</title>
+    <link href="https://dunhuixiao.github.io/2022/05/16/Git/gitignore-%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6%E4%BF%AE%E6%94%B9%E5%90%8E%E6%B8%85%E9%99%A4%E7%BC%93%E5%AD%98%E5%B9%B6%E6%8F%90%E4%BA%A4/"/>
+    <id>https://dunhuixiao.github.io/2022/05/16/Git/gitignore-%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6%E4%BF%AE%E6%94%B9%E5%90%8E%E6%B8%85%E9%99%A4%E7%BC%93%E5%AD%98%E5%B9%B6%E6%8F%90%E4%BA%A4/</id>
+    <published>2022-05-16T02:53:14.000Z</published>
+    <updated>2022-05-16T02:53:14.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/hint.css/2.7.0/hint.min.css&quot;&gt;&lt;div</summary>
+        
+      
+    
+    
+    
+    <category term="Git" scheme="https://dunhuixiao.github.io/categories/Git/"/>
+    
+    
+    <category term="Git" scheme="https://dunhuixiao.github.io/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MyBatis Plus 启动扫描报错 The alias &#39;&#39; is already mapped to the value</title>
+    <link href="https://dunhuixiao.github.io/2022/04/22/Java/MyBatis-Plus-%E5%90%AF%E5%8A%A8%E6%89%AB%E6%8F%8F%E6%8A%A5%E9%94%99-The-alias-is-already-mapped-to-the-value/"/>
+    <id>https://dunhuixiao.github.io/2022/04/22/Java/MyBatis-Plus-%E5%90%AF%E5%8A%A8%E6%89%AB%E6%8F%8F%E6%8A%A5%E9%94%99-The-alias-is-already-mapped-to-the-value/</id>
+    <published>2022-04-22T04:20:00.000Z</published>
+    <updated>2022-04-22T04:20:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/hint.css/2.7.0/hint.min.css&quot;&gt;&lt;div</summary>
+        
+      
+    
+    
+    
+    <category term="Java" scheme="https://dunhuixiao.github.io/categories/Java/"/>
+    
+    <category term="MyBatis Plus" scheme="https://dunhuixiao.github.io/categories/Java/MyBatis-Plus/"/>
+    
+    
+    <category term="Java" scheme="https://dunhuixiao.github.io/tags/Java/"/>
+    
+    <category term="MyBatis Plus" scheme="https://dunhuixiao.github.io/tags/MyBatis-Plus/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用 GitHub Actions 自动部署 Hexo Blog 到 GitHub Page</title>
+    <link href="https://dunhuixiao.github.io/2022/04/16/Git/%E4%BD%BF%E7%94%A8-GitHub-Actions-%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2-Hexo-Blog-%E5%88%B0-GitHub-Page/"/>
+    <id>https://dunhuixiao.github.io/2022/04/16/Git/%E4%BD%BF%E7%94%A8-GitHub-Actions-%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2-Hexo-Blog-%E5%88%B0-GitHub-Page/</id>
+    <published>2022-04-16T18:48:25.000Z</published>
+    <updated>2022-04-16T18:48:25.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/hint.css/2.7.0/hint.min.css&quot;&gt;&lt;div</summary>
+        
+      
+    
+    
+    
+    <category term="Git" scheme="https://dunhuixiao.github.io/categories/Git/"/>
+    
+    
+    <category term="GitHub Actions" scheme="https://dunhuixiao.github.io/tags/GitHub-Actions/"/>
+    
+    <category term="CI" scheme="https://dunhuixiao.github.io/tags/CI/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IDEA Setting Repository 同步仓库报错解决</title>
+    <link href="https://dunhuixiao.github.io/2022/03/10/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/IDEA-Setting-Repository-%E5%90%8C%E6%AD%A5%E4%BB%93%E5%BA%93%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3/"/>
+    <id>https://dunhuixiao.github.io/2022/03/10/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/IDEA-Setting-Repository-%E5%90%8C%E6%AD%A5%E4%BB%93%E5%BA%93%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3/</id>
+    <published>2022-03-10T13:58:41.000Z</published>
+    <updated>2022-03-10T13:58:41.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/hint.css/2.7.0/hint.min.css&quot;&gt;&lt;div</summary>
+        
+      
+    
+    
+    
+    <category term="工具教程" scheme="https://dunhuixiao.github.io/categories/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="Java" scheme="https://dunhuixiao.github.io/tags/Java/"/>
+    
+    <category term="IDEA" scheme="https://dunhuixiao.github.io/tags/IDEA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用 npm-check-updates 更新前端项目中使用到的 npm 包</title>
+    <link href="https://dunhuixiao.github.io/2021/09/04/JavaScript/%E4%BD%BF%E7%94%A8-npm-check-updates-%E6%9B%B4%E6%96%B0%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%88%B0%E7%9A%84-npm-%E5%8C%85/"/>
+    <id>https://dunhuixiao.github.io/2021/09/04/JavaScript/%E4%BD%BF%E7%94%A8-npm-check-updates-%E6%9B%B4%E6%96%B0%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%88%B0%E7%9A%84-npm-%E5%8C%85/</id>
+    <published>2021-09-04T17:06:57.000Z</published>
+    <updated>2021-09-04T17:06:57.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/hint.css/2.7.0/hint.min.css&quot;&gt;&lt;div</summary>
+        
+      
+    
+    
+    
+    <category term="JavaScript" scheme="https://dunhuixiao.github.io/categories/JavaScript/"/>
+    
+    
+    <category term="JavaScript" scheme="https://dunhuixiao.github.io/tags/JavaScript/"/>
+    
+    <category term="npm" scheme="https://dunhuixiao.github.io/tags/npm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git SSH Key 配置好后通过 TortoiseGit GUI 获取代码报错</title>
+    <link href="https://dunhuixiao.github.io/2021/08/06/Git/Git-SSH-Key-%E9%85%8D%E7%BD%AE%E5%A5%BD%E5%90%8E%E9%80%9A%E8%BF%87-TortoiseGit-GUI-%E8%8E%B7%E5%8F%96%E4%BB%A3%E7%A0%81%E6%8A%A5%E9%94%99/"/>
+    <id>https://dunhuixiao.github.io/2021/08/06/Git/Git-SSH-Key-%E9%85%8D%E7%BD%AE%E5%A5%BD%E5%90%8E%E9%80%9A%E8%BF%87-TortoiseGit-GUI-%E8%8E%B7%E5%8F%96%E4%BB%A3%E7%A0%81%E6%8A%A5%E9%94%99/</id>
+    <published>2021-08-06T13:58:41.000Z</published>
+    <updated>2021-08-06T13:58:41.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/hint.css/2.7.0/hint.min.css&quot;&gt;&lt;div</summary>
+        
+      
+    
+    
+    
+    <category term="Git" scheme="https://dunhuixiao.github.io/categories/Git/"/>
+    
+    
+    <category term="Git" scheme="https://dunhuixiao.github.io/tags/Git/"/>
+    
+    <category term="SSH" scheme="https://dunhuixiao.github.io/tags/SSH/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>WIN10 蓝牙无法删除解决方案</title>
+    <link href="https://dunhuixiao.github.io/2021/07/30/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/WIN10-%E8%93%9D%E7%89%99%E6%97%A0%E6%B3%95%E5%88%A0%E9%99%A4%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    <id>https://dunhuixiao.github.io/2021/07/30/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/WIN10-%E8%93%9D%E7%89%99%E6%97%A0%E6%B3%95%E5%88%A0%E9%99%A4%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</id>
+    <published>2021-07-30T13:58:41.000Z</published>
+    <updated>2021-07-30T13:58:41.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/hint.css/2.7.0/hint.min.css&quot;&gt;&lt;div</summary>
+        
+      
+    
+    
+    
+    <category term="工具教程" scheme="https://dunhuixiao.github.io/categories/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="电脑硬件" scheme="https://dunhuixiao.github.io/tags/%E7%94%B5%E8%84%91%E7%A1%AC%E4%BB%B6/"/>
+    
+    <category term="WIN10" scheme="https://dunhuixiao.github.io/tags/WIN10/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>端口进程相关 cmd 指令</title>
+    <link href="https://dunhuixiao.github.io/2021/06/09/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/%E7%AB%AF%E5%8F%A3%E8%BF%9B%E7%A8%8B%E7%9B%B8%E5%85%B3-cmd-%E6%8C%87%E4%BB%A4/"/>
+    <id>https://dunhuixiao.github.io/2021/06/09/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/%E7%AB%AF%E5%8F%A3%E8%BF%9B%E7%A8%8B%E7%9B%B8%E5%85%B3-cmd-%E6%8C%87%E4%BB%A4/</id>
+    <published>2021-06-09T03:43:59.000Z</published>
+    <updated>2021-06-09T03:43:59.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/hint.css/2.7.0/hint.min.css&quot;&gt;&lt;div</summary>
+        
+      
+    
+    
+    
+    <category term="工具教程" scheme="https://dunhuixiao.github.io/categories/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="cmd" scheme="https://dunhuixiao.github.io/tags/cmd/"/>
+    
+    <category term="Windows" scheme="https://dunhuixiao.github.io/tags/Windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MySQL 怎么排查慢 sql</title>
+    <link href="https://dunhuixiao.github.io/2020/04/11/MySQL/MySQL-%E6%80%8E%E4%B9%88%E6%8E%92%E6%9F%A5%E6%85%A2-sql/"/>
+    <id>https://dunhuixiao.github.io/2020/04/11/MySQL/MySQL-%E6%80%8E%E4%B9%88%E6%8E%92%E6%9F%A5%E6%85%A2-sql/</id>
+    <published>2020-04-11T16:38:46.000Z</published>
+    <updated>2020-04-11T16:38:46.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/hint.css/2.7.0/hint.min.css&quot;&gt;&lt;div</summary>
+        
+      
+    
+    
+    
+    <category term="MySQL" scheme="https://dunhuixiao.github.io/categories/MySQL/"/>
+    
+    
+    <category term="MySQL" scheme="https://dunhuixiao.github.io/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>in、not in、exists、not exists 的区别</title>
+    <link href="https://dunhuixiao.github.io/2019/08/28/MySQL/in%E3%80%81not-in%E3%80%81exists%E3%80%81not-exists-%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+    <id>https://dunhuixiao.github.io/2019/08/28/MySQL/in%E3%80%81not-in%E3%80%81exists%E3%80%81not-exists-%E7%9A%84%E5%8C%BA%E5%88%AB/</id>
+    <published>2019-08-28T10:40:18.000Z</published>
+    <updated>2019-08-28T10:40:18.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/hint.css/2.7.0/hint.min.css&quot;&gt;&lt;div</summary>
+        
+      
+    
+    
+    
+    <category term="MySQL" scheme="https://dunhuixiao.github.io/categories/MySQL/"/>
+    
+    
+    <category term="MySQL" scheme="https://dunhuixiao.github.io/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>int(m)、tinyint(m) 中，m 值的意义</title>
+    <link href="https://dunhuixiao.github.io/2018/07/20/MySQL/int-m-%E3%80%81tinyint-m-%E4%B8%AD%EF%BC%8Cm-%E5%80%BC%E7%9A%84%E6%84%8F%E4%B9%89/"/>
+    <id>https://dunhuixiao.github.io/2018/07/20/MySQL/int-m-%E3%80%81tinyint-m-%E4%B8%AD%EF%BC%8Cm-%E5%80%BC%E7%9A%84%E6%84%8F%E4%B9%89/</id>
+    <published>2018-07-20T18:50:02.000Z</published>
+    <updated>2018-07-20T18:50:02.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/hint.css/2.7.0/hint.min.css&quot;&gt;&lt;div</summary>
+        
+      
+    
+    
+    
+    <category term="MySQL" scheme="https://dunhuixiao.github.io/categories/MySQL/"/>
+    
+    
+    <category term="MySQL" scheme="https://dunhuixiao.github.io/tags/MySQL/"/>
+    
+  </entry>
+  
+</feed>
