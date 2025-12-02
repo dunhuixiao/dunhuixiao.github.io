@@ -341,6 +341,37 @@
   </entry>
   
   <entry>
+    <title>常见的缓存更新策略</title>
+    <link href="https://dunhuixiao.github.io/2020/11/19/Redis/%E5%B8%B8%E8%A7%81%E7%9A%84%E7%BC%93%E5%AD%98%E6%9B%B4%E6%96%B0%E7%AD%96%E7%95%A5/"/>
+    <id>https://dunhuixiao.github.io/2020/11/19/Redis/%E5%B8%B8%E8%A7%81%E7%9A%84%E7%BC%93%E5%AD%98%E6%9B%B4%E6%96%B0%E7%AD%96%E7%95%A5/</id>
+    <published>2020-11-19T03:03:00.000Z</published>
+    <updated>2020-11-19T03:03:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/hint.css/2.7.0/hint.min.css&quot;&gt;&lt;div</summary>
+        
+      
+    
+    
+    
+    <category term="Redis" scheme="https://dunhuixiao.github.io/categories/Redis/"/>
+    
+    
+    <category term="Redis" scheme="https://dunhuixiao.github.io/tags/Redis/"/>
+    
+    <category term="缓存" scheme="https://dunhuixiao.github.io/tags/%E7%BC%93%E5%AD%98/"/>
+    
+    <category term="数据一致性" scheme="https://dunhuixiao.github.io/tags/%E6%95%B0%E6%8D%AE%E4%B8%80%E8%87%B4%E6%80%A7/"/>
+    
+    <category term="分布式" scheme="https://dunhuixiao.github.io/tags/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>MySQL 怎么排查慢 sql</title>
     <link href="https://dunhuixiao.github.io/2020/04/11/MySQL/MySQL-%E6%80%8E%E4%B9%88%E6%8E%92%E6%9F%A5%E6%85%A2-sql/"/>
     <id>https://dunhuixiao.github.io/2020/04/11/MySQL/MySQL-%E6%80%8E%E4%B9%88%E6%8E%92%E6%9F%A5%E6%85%A2-sql/</id>
